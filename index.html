@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="scripts.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <!-- <div class="imgContainer"></div> -->
+
+    <nav class="srch-bar">
+      <input type="search" placeholder="Search for cities" class="search-bar" />
+    </nav>
+
+    <main class="main">
+      <section class="main-section">
+        <div class="section city-sect">
+          <div class="div--city">
+            <div class="city-weather">
+              <h1 class="city-name">Madrid</h1>
+              <p class="forecast--hum">chance of rain 0%</p>
+
+              <h1 class="weather-dg">31°</h1>
+            </div>
+            <div class="weather-icon">
+              <img
+                src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                alt=""
+                class="weda-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="section today--forecast">
+          <p class="todays-det">TODAY'S FORECAST</p>
+          <div class="div--today">
+            <div class="today-f-det cloud">
+              <p class="time">6:00 am</p>
+
+              <img src="img/cloud.png" alt="" class="icon" />
+
+              <h2 class="forecast--w">25°</h2>
+            </div>
+
+            <div class="today-f-det">
+              <p class="time">9:00 am</p>
+
+              <img src="img/normal.png" alt="" class="icon" />
+
+              <h2 class="forecast--w">28°</h2>
+            </div>
+
+            <div class="today-f-det">
+              <p class="time">12:00 pm</p>
+
+              <img
+                src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                alt=""
+                class="icon"
+              />
+
+              <h2 class="forecast--w">33°</h2>
+            </div>
+
+            <div class="today-f-det">
+              <p class="time">3:00 pm</p>
+
+              <img
+                src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                alt=""
+                class="icon"
+              />
+
+              <h2 class="forecast--w">34°</h2>
+            </div>
+            <div class="today-f-det">
+              <p class="time">6:00 pm</p>
+
+              <img
+                src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                alt=""
+                class="icon"
+              />
+
+              <h2 class="forecast--w">32°</h2>
+            </div>
+            <div class="today-f-det">
+              <p class="time">9:00 pm</p>
+
+              <img src="img/normal.png" alt="" class="icon" />
+
+              <h2 class="forecast--w">30°</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="section air-conditions">
+          <div class="div--airc">
+            <div class="dets">
+              <p class="todays-det">AIR CONDITIONS</p>
+
+              <button class="more-btn">see more</button>
+            </div>
+            <div class="div--conditions">
+              <div class="condition">
+                <div class="cond-inf">
+                  <span class="ionicons"
+                    ><ion-icon name="thermometer-outline"></ion-icon
+                  ></span>
+
+                  <p class="feel-temp">Real Feel</p>
+                </div>
+                <h1 class="forecast--w numb">30°</h1>
+              </div>
+
+              <div class="condition">
+                <div class="cond-inf">
+                  <span class="ionicons"
+                    ><ion-icon name="barbell-outline"></ion-icon
+                  ></span>
+
+                  <p class="feel-temp">Wind</p>
+                </div>
+                <h1 class="numb wind">0.2km/h</h1>
+              </div>
+
+              <div class="condition">
+                <div class="cond-inf">
+                  <span class="ionicons">
+                    <ion-icon name="water-outline"></ion-icon>
+                  </span>
+
+                  <p class="feel-temp">Chance of rain</p>
+                </div>
+                <h1 class="numb c--rain">0%</h1>
+              </div>
+
+              <div class="condition">
+                <div class="cond-inf">
+                  <span class="ionicons">
+                    <ion-icon name="settings-outline"></ion-icon>
+                  </span>
+
+                  <p class="feel-temp">UV index</p>
+                </div>
+                <h1 class="numb uv-index">30°</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="right-section">
+        <p class="forecast-days">7-DAY FORECAST</p>
+        <div class="container">
+          <div class="container-detail">
+            <div class="forecast--info">
+              <p class="day">Today</p>
+
+              <span class="weather-info">
+                <img
+                  src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                  alt=""
+                  class="forecast-icon"
+                />
+
+                <p class="weather">Sunny</p>
+              </span>
+
+              <p class="temperature">36°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Tue</p>
+
+              <span class="weather-info">
+                <img
+                  src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                  alt=""
+                  class="forecast-icon"
+                />
+
+                <p class="weather">Sunny</p>
+              </span>
+
+              <p class="temperature">37°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Wed</p>
+
+              <span class="weather-info">
+                <img
+                  src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                  alt=""
+                  class="forecast-icon"
+                />
+
+                <p class="weather">Sunny</p>
+              </span>
+
+              <p class="temperature">37°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Thu</p>
+
+              <span class="weather-info">
+                <img src="img/cloud.png" alt="" class="ico forecast-icon" />
+
+                <p class="weather">Cloudy</p>
+              </span>
+
+              <p class="temperature">19°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Fri</p>
+
+              <span class="weather-info">
+                <img src="img/cloud.png" alt="" class="ico forecast-icon" />
+
+                <p class="weather">Cloudy</p>
+              </span>
+
+              <p class="temperature">18°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Sat</p>
+
+              <span class="weather-info">
+                <img src="img/rainy.png" alt="" class="forecast-icon" />
+
+                <p class="weather">Rainy</p>
+              </span>
+
+              <p class="temperature">16°</p>
+            </div>
+
+            <div class="forecast--info">
+              <p class="day">Sun</p>
+
+              <span class="weather-info">
+                <img
+                  src="img/e555eccb-fbe4-4a3c-8917-933a41798140.png"
+                  alt=""
+                  class="forecast-icon"
+                />
+
+                <p class="weather">Sunny</p>
+              </span>
+
+              <p class="temperature">36°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

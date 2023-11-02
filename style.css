@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg--color: rgb(11, 19, 30);
+  --secondary-color: rgb(68, 163, 255);
+  --tertiary--color: rgb(53, 69, 94);
+  --font-color: rgb(255, 255, 254);
+  --color: rgb(147, 153, 162);
+}
+
+body {
+  background-color: var(--bg--color);
+  font-family: 'Rubik', sans-serif;
+  color: var(--color);
+}
+
+.srch-bar {
+  /* max-width: 50rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  background-color: var(--tertiary--color);
+  width: 40rem;
+  height: 3rem;
+  margin: 2rem 3.6rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  color: var(--font-color);
+  padding-left: 1rem;
+}
+::placeholder {
+  padding-left: 1rem;
+  color: var(--font-color);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.section {
+  padding: 4.8rem;
+}
+
+.div--city {
+  max-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-icon {
+  max-width: 12rem;
+}
+
+.weather-icon img {
+  width: 100%;
+}
+
+.city-name {
+  font-size: 2.4rem;
+  margin-bottom: 0.1rem;
+  color: var(--font-color);
+}
+
+.forecast--hum {
+  color: var(--color);
+  margin-bottom: 4rem;
+}
+
+.weather-dg {
+  font-size: 4rem;
+  color: var(--font-color);
+}
+
+.today--forecast {
+  background-color: var(--tertiary--color);
+  max-width: 70rem;
+  /* margin-left: 3.6rem; */
+  border-radius: 2rem;
+}
+
+.div--today {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todays-det {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.icon {
+  height: 6rem;
+  padding: 1rem;
+}
+.cloud {
+  /* width: 20; */
+  border-left: none;
+}
+.today-f-det:first-child {
+  border-left: none;
+}
+
+.today-f-det {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 0.01rem solid var(--color);
+}
+.forecast--w {
+  color: var(--font-color);
+}
+
+.air-conditions {
+  margin-top: 4rem;
+  background-color: var(--tertiary--color);
+  max-width: 70rem;
+  /* height: 30rem; */
+  /* margin-left: 3.6rem; */
+  margin-bottom: 9rem;
+  border-radius: 2rem;
+}
+
+.dets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-btn {
+  font-size: 1rem;
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+
+.div--conditions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ionicons {
+  color: var(--color);
+  margin-right: 0.5rem;
+}
+
+.ionicons > ion-icon {
+  font-size: 1.6rem;
+}
+
+.cond-inf {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.numb {
+  /* margin-left: 2rem; */
+  color: var(--font-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.feel-temp {
+  font-size: 1.6rem;
+}
+
+.right-section {
+  background-color: var(--tertiary--color);
+  height: 125vh;
+  width: 40rem;
+  /* max-width: 50rem; */
+  margin-left: 4rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.forecast--info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--color);
+  height: 17vh;
+}
+
+.forecast--info:last-child {
+  border-bottom: none;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 2fr; */
+  align-items: center;
+  max-width: 20rem;
+}
+
+.forecast-icon {
+  height: 3rem;
+  /* width: 4rem; */
+  margin-right: 1rem;
+}
+
+/* .ico {
+  height: 3rem;
+} */
+
+.forecast-days {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.temperature {
+  text-align: center;
+}
+
+.day,
+.weather,
+.temperature {
+  font-weight: 600;
+}
+
+.day,
+.temperature {
+  width: 11rem;
+  font-size: 1.4rem;
+}
+
+.weather {
+  /* font-weight: 600; */
+  font-size: 1.2rem;
+  color: var(--font-color);
+  width: 14rem;
+  /* text-align: start;
+  padding-left: 1rem; */
+}
