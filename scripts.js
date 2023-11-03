@@ -19,12 +19,9 @@ const uvIndex = document.querySelector('.uv-index');
 //event
 let city;
 let data;
-
-let localData;
 let getLocalData;
 
 const updateWeatherUI = function (data) {
-  console.log('second');
   humidityForecast.textContent = ` ${data.current.condition.text}
   `;
   weatherTemp.textContent = `${data.current.temp_c.toFixed(0)}°`;
@@ -74,7 +71,6 @@ const updateWeatherUI = function (data) {
 };
 
 const fetchWeather = async function (cnt) {
-  // if (localdata) {
   try {
     const res = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=934ed6ad49234f2ea2a34922230111&q=${cnt}&days=7&aqi=yes&alerts=yes`
@@ -82,53 +78,24 @@ const fetchWeather = async function (cnt) {
     data = await res.json();
 
     const storageData = JSON.stringify(data);
-    localData = localStorage.setItem('item', storageData);
-
-    getLocalData = JSON.parse(localStorage.getItem('item'));
-    // console.log(localdata);
-    console.log(getLocalData);
-
-    // assigning values from API call
-
-    updateWeatherUI(getLocalData);
+    localStorage.setItem('item', storageData);
   } catch (err) {
     console.error(err.message);
-    // localdata;
   }
+  updateWeatherUI(data);
 };
 
-// console.log(localdata);
-// localStorage.setItem('forecasts', JSON.stringify(fetchWeather(`${city}`)));
-// };
 
 document.addEventListener('keydown', function (e) {
-  // console.log(e.key);
-  // localData = JSON.parse(localStorage.getItem('item'));
-  // const storage = JSON.stringify(localData);
-  // localStorage.setItem('item', storage);
   if (e.key === 'Enter') {
-    const storage = JSON.stringify(data);
-    localStorage.setItem('item', storage);
-    // getLocalData = JSON.parse(localStorage.getItem('item'));
-    console.log(getLocalData);
     if (!srchBar.value) return;
-
-    // console.log(localdata);
     (city = cityName.textContent = srchBar.value.toUpperCase()),
-      (srchBar.value = '');
-
-    if (getLocalData) {
-      console.log('in');
-      console.log(getLocalData);
-      updateWeatherUI(getLocalData);
-    } else {
-      fetchWeather(city);
-    }
+    (srchBar.value = '');
+    fetchWeather(city);
   }
 });
-console.log(typeof getLocalData);
-// getLocalData = JSON.parse(localStorage.getItem('item'));
+getLocalData = JSON.parse(localStorage.getItem('item'));
 if (getLocalData) {
-  console.log(`first`);
+  city = cityName.textContent = getLocalData.location.name.toUpperCase();
   updateWeatherUI(getLocalData);
 }
