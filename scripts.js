@@ -26,6 +26,7 @@ const updateWeatherUI = function (data) {
   `;
   weatherTemp.textContent = `${data.current.temp_c.toFixed(0)}°`;
 
+  cityName.textContent = `${data.location.name}`.toUpperCase();
   wedaImg.innerHTML = ` <img
   src=${data.current.condition.icon}
   alt=""
@@ -77,6 +78,7 @@ const fetchWeather = async function (cnt) {
     );
     data = await res.json();
 
+    // console.log(data);
     const storageData = JSON.stringify(data);
     localStorage.setItem('item', storageData);
   } catch (err) {
@@ -85,17 +87,15 @@ const fetchWeather = async function (cnt) {
   updateWeatherUI(data);
 };
 
-
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
     if (!srchBar.value) return;
     (city = cityName.textContent = srchBar.value.toUpperCase()),
-    (srchBar.value = '');
+      (srchBar.value = '');
     fetchWeather(city);
   }
 });
 getLocalData = JSON.parse(localStorage.getItem('item'));
 if (getLocalData) {
-  city = cityName.textContent = getLocalData.location.name.toUpperCase();
   updateWeatherUI(getLocalData);
 }
