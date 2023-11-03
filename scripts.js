@@ -74,7 +74,7 @@ const updateWeatherUI = function (data) {
 const fetchWeather = async function (cnt) {
   try {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=934ed6ad49234f2ea2a34922230111&q=${cnt}&days=7&aqi=yes&alerts=yes`
+      `https://api.weatherapi.com/v1/forecast.json?key=934ed6ad49234f2ea2a34922230111&q=${cnt}&days=7&aqi=yes&alerts=yes`
     );
     data = await res.json();
 
